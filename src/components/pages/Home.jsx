@@ -1,10 +1,11 @@
 import React from 'react'
-import Hero from '../components/Hero/Hero'
+import Blog from '../Blog/Blog'
+import Carousel from '../Carousel/Carousel'
 
 const Home = () => {
     return (
         <div>
-            <Hero/>            
+           <Blog/>
         </div>
     )
 }

@@ -1,0 +1,17 @@
+.blog{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.box{
+    width: 300px;
+    text-align: center;
+    box-shadow: 1px 1px 10px #000;
+    padding: 10px;
+}
+
+.box p{
+    padding: 10px;
+    text-align: justify;
+}

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Contact = () => {
+const Carousel = () => {
     return (
         <div>
-            Contact
+            Carousel
         </div>
     )
 }
 
-export default Contact
+export default Carousel
