@@ -1,11 +1,21 @@
 import React from 'react'
-import Blog from '../Blog/Blog'
-import Carousel from '../Carousel/Carousel'
+import Footer from '../Footer/Footer'
+import Media from '../Gallery/Media'
+
+import Hero from '../Hero/Hero'
+import Screen1 from '../MainPage/Screen1'
+import Screen2 from '../MainPage/Screen2'
+import Screen3 from '../MainPage/Screen3'
+
 
 const Home = () => {
     return (
         <div>
-           <Blog/>
+           <Hero/>
+            <Screen1/>
+            <Screen2/>
+            <Screen3/>
+            <Footer/>
         </div>
     )
 }
