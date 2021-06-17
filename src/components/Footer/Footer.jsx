@@ -1,14 +1,14 @@
 import React from "react";
 import classes from "./Footer.module.css";
 
-// import logo from '../../images/logo.jpg';
+import logo from '../../assets/images/logoWhite2.png';    
 // import right from '../../images/footer/1.png'
 // import left from '../../images/footer/2.png'
 
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import LanguageIcon from "@material-ui/icons/Language";
-import FacebookIcon from '@material-ui/icons/Facebook';
+import FacebookIcon from '@material-ui/icons/Facebook'; 
 import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
@@ -39,6 +39,12 @@ const Footer = () => {
           <li><a href='/contact'>Contact</a> </li>
           <li><a href='/donate'>Book Now</a> </li>
         </ul>
+
+
+        {/* Logo */}
+        <img src={logo} alt="nk production Australia Logo"/>
+
+
         {/* Social Contacts */}
         <ul className={classes.feild}>
           <h5>Social Sites</h5>
@@ -49,7 +55,7 @@ const Footer = () => {
           <li><a href="#">Skype</a></li>
         </ul>
         {/* Address */}
-        <ul style={{ width:'30%'}} className={classes.feild}>
+        <ul style={{ width:'95%'}} className={classes.feild}>
           <h5>Address</h5>
           <li >
              NK Photography Stdney , Australia the best in town</li>

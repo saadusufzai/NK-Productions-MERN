@@ -1,22 +1,28 @@
 .innerFooter{
     width: 95%;
-    margin:0 auto;
-    display: flex;
-    justify-content: space-between;
+    height: 380px;
+    
+    display: grid;
+    grid-template-columns: 20% 20% 30% 10% 20%;
+    
+ 
     padding: 10px;
+    margin: auto auto;
+    align-content: end;
 
 }
 .footer{
-    
+    width: 100%;
+    height: 400px;
     color: #fff;
     background-color: #000;
 }
 
 .footer img {
     display: block;
-    width: 100px;
-    height: 100px;
-    margin: 20px auto;
+    width: 280px;
+ 
+ 
 }
 
 .footer .innerFooter ul  {
@@ -82,12 +88,10 @@
     
 }
 
-.footer .copyright img{
-   width: 280px;
-   height: 200px;
-}
+
 .footer .copyright .text{
     
     font-size: 10px;
+    margin-left: 4em;
     color: rgba(73, 72, 72, 0.76);
 }

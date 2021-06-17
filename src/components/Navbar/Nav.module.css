@@ -1,4 +1,6 @@
 .header {
+    position: relative;
+    z-index: 100;
     display: flex;
     width: 90%;
     justify-content: space-between;
@@ -6,6 +8,13 @@
     align-items: center;
     padding-top: 1em;
     color: #fff;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
  

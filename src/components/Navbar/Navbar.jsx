@@ -1,28 +1,28 @@
 import React from "react";
 import styles from "./Nav.module.css";
-
+import {Link} from 'react-router-dom'
 const Navbar = () => {
   return (
-    <div className={styles.header}>
+    <div styles={{backgroundColor: '#000'}} className={styles.header}>
       <div className={styles.logo}>
         <h2>NK Production House</h2>
       </div>
 
       <ul className={styles.nav}>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a href="/gallery">Gallery</a>
+          <Link to="/gallery">Gallery</Link>
         </li>
         <li>
-          <a href="">Booking</a>
+          <Link to="">Booking</Link>
         </li>
         <li>
-          <a href="">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </div>

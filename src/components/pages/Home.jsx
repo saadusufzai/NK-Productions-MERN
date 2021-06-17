@@ -15,7 +15,7 @@ const Home = () => {
             <Screen1/>
             <Screen2/>
             <Screen3/>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     )
 }
