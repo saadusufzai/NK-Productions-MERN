@@ -8,6 +8,7 @@ import About from "./components/pages/About";
 import Contact from './components/pages/Contact';
 import Gallery from "./components/pages/Gallery";
 import Footer from "./components/Footer/Footer";
+import Booking from "./components/pages/Booking";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>}/>
         <Route path='/gallery' element={<Gallery/>} />
+        <Route path='/booking' element={<Booking/>} />
         <Route path='/contact' element={<Contact/>} />
       </Routes>
       <Footer/>
