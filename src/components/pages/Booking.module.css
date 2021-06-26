@@ -1,14 +1,49 @@
 .booking{
     background:linear-gradient(to bottom, rgba(11, 112, 104, 0.555), rgba(0, 0, 0, 0.856)), url('../../assets/images/wedding.jpg') center center no-repeat ;
     background-size: cover;
-    height:100vh;
+    
 }
 
 .booking .box {
     width: 950px;
-    height: 500px;
-    background-color: #fff;
+    height: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.151);
     margin:  auto;
     margin-top: 3em;
-    box-shadow: 2px 2px  10px rgba(8, 144, 255, 0.829);
+    
+}
+.booking .box .left  {
+  
+    background-color:rgb(255, 255, 255);
+    padding: 2em;
+}
+.booking .box .left form input[type='text'],.booking .box .left form input[type='number']  {
+  
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.booking .box .left .btn{
+    display: block;
+    margin-top: 2em;
+    padding: 8px 70px;
+}
+
+.booking .box .right  {
+    margin: auto;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.booking .box .right h1{
+    color: #fff;
+    letter-spacing: 10px;
+}
+.booking .box .right h2{
+    color: #000;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.534);
+    letter-spacing: 5px;
 }

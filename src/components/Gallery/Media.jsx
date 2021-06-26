@@ -21,7 +21,7 @@ const Media = () => {
   return (
     <div    className={classes.media}>
         <h1 className={classes.text}>Gallery</h1>
-      <Gallery margin={'10'} photos={photos} onClick={openLightbox}  columns='2' direction={"column"}/>
+      <Gallery margin={'10'} photos={photos} onClick={openLightbox}  columns='3' direction={"column"}/>
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>

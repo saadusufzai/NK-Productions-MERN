@@ -14,18 +14,18 @@ import img10 from '../../assets/images/gallery/10.jpeg'
 export const photos = [
     {
       src: img1,
-      width: 10,
+      width: 8,
       height: 5
     },
     {
       src: img2,
-      width: 1,
-      height: 1
+      width: 3,
+      height: 2
     },
     {
       src: img3,
-      width: 3,
-      height: 4
+      width: 2,
+      height: 2
     },
     {
       src: img4,
@@ -44,8 +44,8 @@ export const photos = [
     },
     {
       src: img7,
-      width: 4,
-      height: 4
+      width: 2,
+      height: 2
     },
     {
       src: img8,
@@ -60,6 +60,6 @@ export const photos = [
     {
       src: img10,
       width: 4,
-      height: 6
+      height: 5
     },
     ];
