@@ -21,6 +21,26 @@
  .nav{
     list-style-type: none;
     display: flex;
+    align-items: center;
+}
+
+.nav .about{
+    position: relative;
+
+
+}
+.nav .about a.dropdown{
+    display: none;
+  position :absolute;
+  top: 2em;
+  left: 0;
+  transform: translateY(20%);
+  transition: position ease-in-out 500ms ;
+  /* display: none; */
+}
+
+.nav .about:hover a.dropdown {
+    display: block;
 }
 
  .nav li{

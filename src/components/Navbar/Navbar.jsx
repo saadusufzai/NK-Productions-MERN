@@ -1,9 +1,10 @@
-import React from "react";
+import React,{ useState} from "react";
 import styles from "./Nav.module.css";
 import {Link} from 'react-router-dom'
 const Navbar = () => {
+  let [dropdown, setDropDown] = useState(false)
   return (
-    <div styles={{backgroundColor: '#000'}} className={styles.header}>
+    <div  styles={{backgroundColor: '#000'}} className={styles.header}>
       <div className={styles.logo}>
         <h2>NK Production House</h2>
       </div>
@@ -12,8 +13,10 @@ const Navbar = () => {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/about">About</Link>
+        <li className={styles.about}>
+          <Link onMouseOver={()=>setDropDown(true)}    to="/about">About</Link>
+          <Link onMouseOut={()=>setDropDown(false)} style={{display:`${dropdown? 'block': 'none'}`}} className={styles.dropdown} to="/youtube">YouTube</Link>
+          
         </li>
         <li>
           <Link to="/gallery">Gallery</Link>
@@ -25,6 +28,7 @@ const Navbar = () => {
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
+
     </div>
   );
 };
