@@ -6,7 +6,7 @@ import styles from "./Youtube.module.css";
 
 const Youtube = () => {
   let [videos, setVideos] = useState(["NmoB8Wlrujs", "bNGNwMS66Zc", "QHMEPbLTYqA", "xEOavHQVkEQ", "wCqorZ5PUW0", "7mdj1NCymJk", "yDxUfzZbgpE", "gB8ui8ZgLU8", "rBpdb_Gy1sY", "UJCVE-GJQoI", "7Hv9t3QOfsM", "-1y8RJU23hc", "nyUyq6_4NP4", "c6HvaMeCuYY", "FQNKLpCJ-H8", "GwBdEcGaaJo", "V3cHVArLkAQ", "Byxeauqlk-k", "NPKNbiaIhw0", "4q91docoFsM", "C7l_IUEDuH8", "2cSCndxMR7E", "iLD1LsvTIsw", "KtL7PfP8AC4", "I-ylIIbJlKQ", "wlgeITB0ziA", "DjMvHhQ49xs", "cyOKYKOla5I", "-iFhmNFLEH8"]);
-  const url = process.env.URL 
+  const url = process.env.REACT_APP_YTURL 
   console.log(url);
   useEffect(() => {
     axios
