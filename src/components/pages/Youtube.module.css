@@ -23,3 +23,39 @@
     flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr );
 }
+
+
+@media only screen and (max-width: 600px)  {
+    .youtube{
+        width: 100%;
+        background: #000;
+        color: #fff;
+    }
+    
+    .youtube .page h1{
+        font-size: 24px;
+        text-align: center;
+        margin-top: 1em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 1px 1px 5px rgb(234, 0, 255);
+    }
+
+    .youtube .page .container {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2em;
+        background:rgba(56, 56, 56, 0.315);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        flex-wrap: wrap;
+       
+    }
+
+    .youtube .video iframe {
+        width: 270px !important;
+        height: 200px !important;
+    }
+
+}

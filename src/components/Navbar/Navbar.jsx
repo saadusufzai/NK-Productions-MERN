@@ -3,14 +3,19 @@ import styles from "./Nav.module.css";
 import {Link} from 'react-router-dom'
 const Navbar = () => {
   let [dropdown, setDropDown] = useState(false)
+  let [burger,setBurger] = useState(false)
   return (
     <div  styles={{backgroundColor: '#000'}} className={styles.header}>
+      <i onClick={()=>setBurger(!burger)} className="fa fa-bars fa-2x" aria-hidden="true"></i>
+      
       <div className={styles.logo}>
         <h2>NK Production House</h2>
       </div>
 
-      <ul className={styles.nav}>
+      <ul style={{transform:`${burger?"translateX(-40px)":"translateX(-280px)" }`}} className={styles.nav}>
         <li>
+        <i onClick={()=>setBurger(!burger)} style={{left:'12em',top:'.5em'}} className="fa fa-times" aria-hidden="true"></i>
+      
           <Link to="/">Home</Link>
         </li>
         <li className={styles.about}>

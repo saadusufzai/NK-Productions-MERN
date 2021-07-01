@@ -28,7 +28,7 @@ const Youtube = () => {
           <h1>Documentaries by NK</h1>
           <div className={styles.container}>
             {videos.map((data,key)=> 
-            <div key={key}  className="video">
+            <div key={key}  className={styles.video}>
               <iframe
                  
                 width="350"

@@ -2,8 +2,7 @@ import React from "react";
 import classes from "./Footer.module.css";
 
 import logo from '../../assets/images/logoWhite2.png';    
-// import right from '../../images/footer/1.png'
-// import left from '../../images/footer/2.png'
+
 
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
@@ -12,7 +11,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
-// import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div   id="page-wrap" className={classes.footer}>

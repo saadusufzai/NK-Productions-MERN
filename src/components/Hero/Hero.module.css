@@ -1,7 +1,7 @@
 .hero {
     background: linear-gradient(to bottom, rgba(13, 145, 134, 0.555), rgba(0, 0, 0, 0.73)),
     url("../../assets/images/hero2.jpg");
-   
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -19,4 +19,35 @@
     border: 5px solid #eaeaea;
     box-shadow:1px 1px 15px rgb(26, 131, 108);
     text-shadow: 1px 1px 10px #fff;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 600px)  {
+    .hero {
+        background: linear-gradient(to bottom, rgba(13, 145, 134, 0.555), rgba(0, 0, 0, 0.73)),
+        url("../../assets/images/hero2.jpg") ;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: cover;
+        height: 100vh;
+        color: #fff;
+       
+    }
+
+
+    .hero .box{
+        width:80%;
+        position:relative;
+        padding: 10px;
+        text-align: center;
+        margin: 20em  auto 0 auto;
+        border: 5px solid #eaeaea;
+        box-shadow:1px 1px 15px rgb(26, 131, 108);
+        text-shadow: 1px 1px 10px #fff;
+        z-index: -1;
+    }
+
 }

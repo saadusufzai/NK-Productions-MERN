@@ -14,7 +14,6 @@
 }
 
 .screen1 .imgBox .text h1 {
- 
   text-transform: uppercase;
   letter-spacing: 10px;
   text-align: center;
@@ -38,8 +37,8 @@
 }
 
 .screen2 .imgBox {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
   display: inline-block;
   width: 60em;
   height: 30em;
@@ -48,17 +47,17 @@
 }
 
 .screen2 .imgBox .text h1 {
-    width: 90%;
-    margin: 0 auto;
- 
+  width: 90%;
+  margin: 0 auto;
+
   text-transform: uppercase;
   letter-spacing: 10px;
   text-align: center;
 }
 .screen2 .imgBox .text h3 {
-    width: 90%;
-    margin: 1em auto;
- 
+  width: 90%;
+  margin: 1em auto;
+
   text-transform: uppercase;
   letter-spacing: 5px;
   text-align: center;
@@ -72,7 +71,6 @@
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.527);
 }
 
-
 /* Screen3 Screen3 Screen3 Screen3 Screen3 Screen3 Screen3 Screen3 Screen3 Screen3 Screen3 Screen3  */
 .screen3 {
   background: #000;
@@ -84,7 +82,7 @@
   width: 90%;
   height: 70%;
   margin: 0 auto;
-  padding-top:5em ;
+  padding-top: 5em;
   text-align: center;
   background: #fff;
 }
@@ -93,9 +91,115 @@
   margin: 0 auto;
   margin-top: 8em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-.screen3 .box .images .image img{
+.screen3 .box .images .image img {
   width: 350px;
-  
+}
+
+@media only screen and (max-width: 600px) {
+  .screen1 {
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .screen1 .imgBox {
+    display: inline-block;
+    width: 90vw;
+    height: 90vh;
+    margin-top: 4em;
+    background: #fff;
+  }
+
+  .screen1 .imgBox .text h1 {
+    width: 100%;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-right: 1em;
+  }
+
+  .screen1 .imgBox img {
+    position: absolute;
+    right: 2em;
+    top: 10em;
+    width: 400px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.527);
+  }
+
+  /* SCREEN2 ScREEN2  */
+
+  .screen2 {
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .screen2 .imgBox {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 90vw;
+    height: 90vh;
+    margin-top: 0em;
+    background: #fff;
+  }
+
+  .screen2 .imgBox .text h1 {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .screen2 .imgBox .text h3 {
+    width: 90%;
+    margin: 0em auto;
+    color: rgb(136, 136, 136);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  .screen2 .imgBox img {
+    position: absolute;
+    width: 230px;
+    left: 2em;
+    bottom: -2em;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.527);
+  }
+
+  /* Screen3 */
+
+  .screen3 {
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  .screen3 .box {
+    width: 90%;
+    height: 85%;
+    margin: 0 auto;
+    padding-top: 0em;
+    text-align: center;
+    background: #fff;
+  }
+  .screen3 .box .images {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .screen3 .box .images .image img {
+    width: 230px;
+  }
 }

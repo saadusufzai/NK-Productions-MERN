@@ -47,3 +47,60 @@
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.534);
     letter-spacing: 5px;
 }
+
+@media only screen and (max-width: 600px)  {
+    .booking{
+        background:linear-gradient(to bottom, rgba(11, 112, 104, 0.555), rgba(0, 0, 0, 0.856)), url('../../assets/images/wedding.jpg') center center no-repeat ;
+        background-size: cover;
+        
+    }
+    
+    .booking .box {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.151);
+        margin:  auto;
+        margin-top: 3em;
+        
+    }
+    .booking .box .left  {
+        width:auto;
+        background-color:rgb(255, 255, 255);
+        padding: 1em;
+    }
+    .booking .box .left form input[type='text'],.booking .box .left form input[type='number']  {
+        display: block;
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+ 
+    
+    .booking .box .left .btn{
+        display: block;
+        margin-top: 2em;
+        padding: 8px 70px;
+    }
+    
+    .booking .box .right  {
+        margin: 1em;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .booking .box .right h1{
+        color: #fff;
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+    .booking .box .right h2{
+        color: #000;
+        font-size: 25px;
+        text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.534);
+        letter-spacing: 3px;
+    }
+
+}
