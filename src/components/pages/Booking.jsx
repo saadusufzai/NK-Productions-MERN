@@ -7,6 +7,11 @@ import MomentUtils from "@date-io/moment";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import axios from 'axios'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -17,8 +22,64 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Booking = () => {
-  const [selectedDate, handleDateChange] = useState(new Date());
   const classes = useStyles();
+
+
+  const [selectedDate, handleDateChange] = useState(new Date());
+  const [fullName,setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [eventType, setEventType] = useState('');
+  const [hours, setHours] = useState('');
+  const [date, setDate] = useState(new Date());
+  const [phone, setPhone] = useState('');
+
+
+  const url = 'http://localhost:5000'
+
+  const handelSubmit = (e)=>{
+
+    e.preventDefault();
+
+    // Request body
+    const data = JSON.stringify({
+      fullName,
+      email,
+      eventType, 
+      hours,
+      date, 
+      phone, 
+
+    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    };
+
+    axios
+      .post(`${url}/api/booking`, data, config)
+      .then((res) => {
+       
+        console.log(res.data);
+      
+        toast.success("Thanks for booking with us. Our team will react you soon on your phone.")
+      })
+      .catch((err) => {
+        toast.error(err.response.data.msg, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+        console.log(err.response.data.msg)});
+  };
+
+
   return (
     <div className={styles.booking}>
       <Navbar />
@@ -29,23 +90,23 @@ const Booking = () => {
           <form className={classes.root}>
             <h3>Personal Details</h3>
             <p>Kindly fill your personal details</p>
-            <TextField id="outlined" label="Full Name" />
-            <TextField id="outlined" label="Email" /> <br />
-            <TextField id="outlined" label="Phone" /> <br /> <br />
+            <TextField onChange = {(e)=>setFullName(e.target.value)} id="outlined" label="Full Name" />
+            <TextField onChange = {(e)=>setEmail(e.target.value)} id="outlined" label="Email" /> <br />
+            <TextField onChange = {(e)=>setPhone(e.target.value)} id="outlined" label="Phone" /> <br /> <br />
             <h3>Event Details</h3>
             <p>Kindly fill your event's details</p>
-            <TextField id="outlined" label="Event Type" />
-            <TextField id="outlined" label="No of Hours" type="number" />
+            <TextField onChange = {(e)=>setEventType(e.target.value)} id="outlined" label="Event Type" />
+            <TextField onChange = {(e)=>setHours(e.target.value)} id="outlined" label="No of Hours" type="number" />
             <br />
             <br />
             <MuiPickersUtilsProvider utils={MomentUtils}>
               <DateTimePicker
                 label="Pick Date & Time"
-                value={selectedDate}
-                onChange={handleDateChange}
+                value={date}
+                onChange={setDate}
               />
             </MuiPickersUtilsProvider>
-            <Button className={styles.btn} variant="contained" color="secondary">
+            <Button onClick={handelSubmit} className={styles.btn} variant="contained" color="secondary">
               Submit
             </Button>
           </form>

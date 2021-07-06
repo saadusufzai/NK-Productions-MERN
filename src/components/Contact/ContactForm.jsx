@@ -8,46 +8,62 @@ import TextField from "@material-ui/core/TextField";
 // import img1 from "../../images/form/1.png";
 // import img2 from "../../images/form/2.png";
 // import img3 from "../../images/form/3.png";
-// import axios from 'axios'
+import axios from 'axios'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const [firstName,setFirstName] = useState();
   const [lastName,setLastName] = useState();
   const [email,setEmail] = useState();
   const [message,setMessage] = useState();
-  const [datas, setData] = useState();
+  const [data, setData] = useState();
   const [open, setOpen] = useState(true);
   const [showText,setShowText] = useState(true);
   
   const handelSubmit = (e)=>{
 
-    // e.preventDefault();
+    e.preventDefault();
 
-    // // Request body
-    // const data = JSON.stringify({
-    //   firstName,
-    //   lastName,
-    //   email,
-    //   message
-    // });
+    // Request body
+    const data = JSON.stringify({
+      firstName,
+      lastName,
+      email,
+      message
+    });
 
-    // const config = {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     "Access-Control-Allow-Origin": "*",
-    //   },
-    // };
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    };
 
-    // axios
-    //   .post("http://localhost:5000/api/contact", data, config)
-    //   .then((res) => {
-    //     setData(res.data);
-    //     console.log(res.data);
-    //     setOpen(false)
-    //     // alert.success("Thank you! Your Squad is Registered!");
-       
-    //   })
-    //   .catch((err) => console.log(err));
+    axios
+      .post("http://localhost:5000/api/contact", data, config)
+      .then((res) => {
+        setData(res.data);
+        console.log(res.data);
+        setOpen(false)
+        // alert.success("Thank you! Your Squad is Registered!");
+        toast.success("Thanks for booking with us. Our team will react you soon on your phone.")
+      })
+      .catch((err) => {
+        
+          toast.error(err.response.data.msg, {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+          console.log(err.response.data.msg)})
+
+     
   };
 
   
@@ -118,7 +134,7 @@ const ContactForm = () => {
         <div className={styles.bgImages}>
         
         </div>
-      </form>): (<h2 style={{textAlign:'center'}}>Thank You {firstName} for submitting your message </h2>)}
+      </form>): (<h2 style={{textAlign:'center',color:'#fff'}}>Thank You {firstName} for submitting your message </h2>)}
     </div>
   );
 };

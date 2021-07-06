@@ -12,7 +12,7 @@ const Navbar = () => {
         <h2>NK Production House</h2>
       </div>
 
-      <ul style={{transform:`${burger?"translateX(-40px)":"translateX(-280px)" }`}} className={styles.nav}>
+      <ul style={{transform:`${burger?"translateX(-40px)":"" }`}} className={styles.nav}>
         <li>
         <i onClick={()=>setBurger(!burger)} style={{left:'12em',top:'.5em'}} className="fa fa-times" aria-hidden="true"></i>
       

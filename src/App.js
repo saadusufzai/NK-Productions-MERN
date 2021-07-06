@@ -12,6 +12,9 @@ import Booking from "./components/pages/Booking";
 import Youtube from "./components/pages/Youtube";
 
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
    <div>
@@ -27,6 +30,7 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
       </Routes>
       <Footer/>
+      <ToastContainer />
     </Router>
 
     </div>
