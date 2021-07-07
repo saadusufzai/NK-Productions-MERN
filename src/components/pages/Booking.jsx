@@ -34,7 +34,7 @@ const Booking = () => {
   const [phone, setPhone] = useState('');
 
 
-  const url = 'http://localhost:5000'
+  const url = 'https://nk-backend.herokuapp.com'
 
   const handelSubmit = (e)=>{
 
