@@ -1,7 +1,7 @@
 .screen1 {
   background: #000;
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
 }
 
@@ -75,7 +75,7 @@
 .screen3 {
   background: #000;
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
 }
 .screen3 .box {
@@ -95,8 +95,47 @@
   justify-content: space-between;
 }
 .screen3 .box .images .image img {
-  width: 350px;
+  max-width: 350px;
 }
+
+@media only screen and (max-width: 1280px) {
+
+  .screen2 .imgBox {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 50em;
+    height: 30em;
+    margin-top: 4em;
+    background: #fff;
+  }
+  
+
+
+  .screen3 .box {
+    width: 90%;
+    height: 70%;
+    margin: 0 auto;
+    padding-top: 5em;
+    text-align: center;
+    background: #fff;
+  }
+  .screen3 .box .images {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .screen3 .box .images .image img {
+    width: 250px;
+  }
+
+
+
+}
+
 
 @media only screen and (max-width: 600px) {
   .screen1 {

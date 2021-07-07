@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <div className={styles.contact}>
             <Navbar/>
-            <Fade>
+            <Fade left>
                 <ContactForm/>
             </Fade>
         </div>
