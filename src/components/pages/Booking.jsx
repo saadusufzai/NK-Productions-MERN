@@ -38,7 +38,9 @@ const Booking = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault();
-
+    toast.success(
+      "Booking Submitted. You will receive a notification shortly."
+    );
     // Request body
     const data = JSON.stringify({
       fullName,
