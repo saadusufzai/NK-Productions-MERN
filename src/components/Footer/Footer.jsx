@@ -26,11 +26,11 @@ const Footer = () => {
           </li>
           <li>
             <EmailIcon fontSize="small" className={classes.icon} />{" "}
-            info@nkpro.com.au
+            contact@nkproductions.com.au
           </li>
           <li>
             <LanguageIcon fontSize="small" className={classes.icon} />{" "}
-            www.nkpro.com.au
+            www.nkproductions.com.au
           </li>
         </ul>
         {/* Links */}
